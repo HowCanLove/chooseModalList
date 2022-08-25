@@ -1,0 +1,122 @@
+.chooseModal {
+  :global(.ant-modal-header),
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  .chooseModalTitleGrid {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &.chooseBody {
+      & > div:first-child {
+        overflow-y: auto;
+        width: auto;
+        padding: 16px 0 0;
+        & > div,
+        & > form {
+          padding: 0 16px;
+        }
+        .choosePaginationWarp {
+          padding: 10px 16px;
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .tip {
+            padding: 0 3px;
+            color: red;
+          }
+        }
+
+        .radioButtonBox {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          border-top: 1px solid #f0f0f0;
+          padding: 10px 24px;
+          button:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    & > span,
+    & > div {
+      padding: 16px;
+      width: 300px;
+      &:first-child {
+        border-right: 1px solid #f0f0f0;
+        flex: 1;
+      }
+      &.chooseWarp {
+        padding: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .chooseListBox {
+          padding: 16px;
+          flex: 1;
+          overflow: auto;
+          .chooseItem {
+            line-height: 50px;
+            position: relative;
+            padding-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #f0f0f0;
+            & > :first-child {
+              margin-top: 0;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .title {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              margin: 0;
+            }
+            .remove {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              color: rgba(0, 0, 0, 0.25);
+              &:hover {
+                color: rgba(0, 0, 0, 0.45);
+              }
+            }
+          }
+        }
+        .chooseButtonWarp {
+          border-top: 1px solid #f0f0f0;
+          padding: 0 24px;
+          height: 60px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          flex-grow: 0;
+          & > span {
+            flex: 1;
+            & > span {
+              padding: 0 3px;
+              color: orange;
+            }
+          }
+          & > div > button {
+            &:last-child {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
