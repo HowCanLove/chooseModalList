@@ -1,6 +1,6 @@
 {
   "name": "choose-modal-list",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/index.js",
   "author": "liukai",
@@ -10,6 +10,9 @@
     "preview": "vite preview",
     "pub": "node ./publishPub.js"
   },
+  "files": [
+    "dist/"
+  ],
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "ahooks": "^3.7.0",
