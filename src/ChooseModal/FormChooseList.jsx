@@ -23,6 +23,7 @@ const ChooseModal = (props, ref) => {
   const { loading, run: getList } = useRequest(
     (params) => {
       const newParams = { ...query, ...params };
+      console.log(newParams, params, defaultParams, [{ pageNo: 1, pageSize: 5, ...defaultParams }],);
       Object.keys(newParams).forEach((i) => {
         ["", undefined, null].includes(newParams[i]) && delete newParams[i];
       });
@@ -31,7 +32,7 @@ const ChooseModal = (props, ref) => {
     },
     {
       manual: true,
-      defaultParams: [{ pageNo: 1, pageSize: 5 }],
+      defaultParams: [{ pageNo: 1, pageSize: 5, ...defaultParams }],
       onSuccess: (res) => {
         // 也有可能会有不分页的场景
         if (Array.isArray(res)) {
@@ -108,6 +109,7 @@ function FormChooseList(props) {
     type = selectionType.radio,
     needPaging = true,
     maxLength = type === selectionType.radio ? 1 : 10,
+    defaultParams={}
   } = props;
 
   const list =
@@ -166,6 +168,7 @@ function FormChooseList(props) {
           keyword={keyword}
           labelWorld={labelWorld}
           {...chooseForm}
+          defaultParams={defaultParams}
           needPaging={needPaging}
           onOk={(resultList) => {
             let result = resultList.map((i) => i[keyword]);

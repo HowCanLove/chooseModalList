@@ -1,6 +1,7 @@
 import { Button, Form, Input } from "antd";
 import React, { useRef } from "react";
-import { FormChooseList } from "../dist";
+// import { FormChooseList } from "../dist";
+import { FormChooseList } from "./index";
 import { DeleteOutlined } from "@ant-design/icons";
 import { Space } from "antd";
 
@@ -74,6 +75,8 @@ function Test() {
               ),
               saveForm: true,
             }}
+            defaultParams={{pageSize: 10}}
+            hideChooseButton={false}
             keyword="id"
             labelWorld="name"
             requestFun={request}
