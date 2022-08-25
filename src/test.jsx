@@ -1,6 +1,6 @@
 import { Button, Form, Input } from "antd";
 import React, { useRef } from "react";
-import { FormChooseList } from "./index";
+import { FormChooseList } from "../dist";
 import { DeleteOutlined } from "@ant-design/icons";
 import { Space } from "antd";
 

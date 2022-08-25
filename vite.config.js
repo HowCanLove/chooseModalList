@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import VitePluginStyleInject from 'vite-plugin-style-inject';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), VitePluginStyleInject()],
   css: {
     preprocessorOptions: {
       less: {
